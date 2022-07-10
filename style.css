@@ -13,11 +13,11 @@ h2 {
 }
 
 .wave,
-#type{
+#type {
     background: -webkit-linear-gradient(right, #ff176c, #ff9e30);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    
+
 }
 
 h3 {
@@ -50,17 +50,17 @@ h3 {
             #ff176c 29%,
             #ff176c 67%,
             #ff9e30 100%);
-            background-size: auto auto;
-            background-clip: border-box;
-            background-size: 200% auto;
-            color: #fff;
-            background-clip: text;
-            text-fill-color: transparent;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: textclip 1.3s linear infinite;
-            display: inline-block;
-        }
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 1.3s linear infinite;
+    display: inline-block;
+}
 
 @keyframes textclip {
     to {
@@ -90,13 +90,13 @@ h3 {
 }
 
 @keyframes waviy {
-    
+
     0%,
     40%,
     100% {
         transform: translateY(0)
     }
-    
+
     20% {
         transform: translateY(-20px)
     }
@@ -119,7 +119,7 @@ h5 {
     33% {
         --pgPercentage: 0;
     }
-    
+
     100% {
         --pgPercentage: var(--value);
     }
@@ -143,8 +143,8 @@ h5 {
     display: grid;
     place-items: center;
     background:
-    radial-gradient(closest-side, black 94%, transparent 0 99.9%, black 0),
-    conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
+        radial-gradient(closest-side, black 94%, transparent 0 99.9%, black 0),
+        conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
     font-size: calc(var(--size) / 5);
     color: var(--fg);
 }
@@ -170,7 +170,7 @@ footer {
     padding-left: 8%;
 }
 
-.project-title{
+.project-title {
     background: -webkit-linear-gradient(right, #ff176c, #ff9e30);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -178,24 +178,113 @@ footer {
     font-weight: 750;
 }
 
-.left-project {
+.left-project, .left {
     padding-right: 10px;
     width: 50%;
     float: left;
 }
 
-.right-project {
+.right-project, .right {
     padding-left: 10px;
     width: 50%;
     float: right;
 }
 
-a{
+a {
     text-decoration: none;
     color: #ff9e30;
 }
+
+.portfolio-numbers, .weather-numbers{
+    font-size: 300%;
+    font-weight: 800;
+}
+@property --num {
+    syntax: "<integer>";
+    initial-value: 1392;
+    inherits: false;
+}
+
+.active-num{
+    animation: counter 3s ease-in-out;
+  counter-reset: num var(--num);
+}
+
+.active-num::after {
+    content: counter(num);
+  }
+
+  @keyframes counter {
+    from {
+      --num: 0;
+    }
+    to {
+      --num: 1392;
+    }
+  }
+
+  
+@property --num2 {
+    syntax: "<integer>";
+    initial-value: 1349;
+    inherits: false;
+}
+
+.active-num2{
+    animation: count 3s ease-in-out;
+  counter-reset: num2 var(--num2);
+}
+
+.active-num2::after {
+    content: counter(num2);
+  }
+
+  @keyframes count {
+    from {
+      --num2: 0;
+    }
+    to {
+      --num2: 1349;
+    }
+  }
+
+@property --num3 {
+    syntax: "<integer>";
+    initial-value: 426;
+    inherits: false;
+}
+
+.active-num3{
+    animation: count2 3s ease-in-out;
+  counter-reset: num3 var(--num3);
+}
+
+.active-num3::after {
+    content: counter(num3);
+  }
+
+  @keyframes count2 {
+    from {
+      --num3: 0;
+    }
+    to {
+      --num3: 426;
+    }
+  }
+
+  .contact-link{
+    display: inline;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .btn{
+    color:white;
+    border: 1px solid white;
+  }
+
 @media (max-width : 600px) {
-    
+
     .home-intro,
     .about-intro {
         text-align: center;
