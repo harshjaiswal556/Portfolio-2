@@ -178,13 +178,15 @@ footer {
     font-weight: 750;
 }
 
-.left-project, .left {
+.left-project,
+.left {
     padding-right: 10px;
     width: 50%;
     float: left;
 }
 
-.right-project, .right {
+.right-project,
+.right {
     padding-left: 10px;
     width: 50%;
     float: right;
@@ -195,9 +197,14 @@ a {
     color: #ff9e30;
 }
 
-.portfolio-numbers, .weather-numbers{
+.portfolio-numbers,
+.weather-numbers {
     font-size: 300%;
     font-weight: 800;
+}
+
+.code-line{
+    font-size: 200%;
 }
 @property --num {
     syntax: "<integer>";
@@ -205,48 +212,50 @@ a {
     inherits: false;
 }
 
-.active-num{
+.active-num {
     animation: counter 3s ease-in-out;
-  counter-reset: num var(--num);
+    counter-reset: num var(--num);
 }
 
 .active-num::after {
     content: counter(num);
-  }
+}
 
-  @keyframes counter {
+@keyframes counter {
     from {
-      --num: 0;
+        --num: 0;
     }
-    to {
-      --num: 1392;
-    }
-  }
 
-  
+    to {
+        --num: 1392;
+    }
+}
+
+
 @property --num2 {
     syntax: "<integer>";
     initial-value: 1349;
     inherits: false;
 }
 
-.active-num2{
+.active-num2 {
     animation: count 3s ease-in-out;
-  counter-reset: num2 var(--num2);
+    counter-reset: num2 var(--num2);
 }
 
 .active-num2::after {
     content: counter(num2);
-  }
+}
 
-  @keyframes count {
+@keyframes count {
     from {
-      --num2: 0;
+        --num2: 0;
     }
+
     to {
-      --num2: 1349;
+        --num2: 1349;
     }
-  }
+}
 
 @property --num3 {
     syntax: "<integer>";
@@ -254,51 +263,34 @@ a {
     inherits: false;
 }
 
-.active-num3{
+.active-num3 {
     animation: count2 3s ease-in-out;
-  counter-reset: num3 var(--num3);
+    counter-reset: num3 var(--num3);
 }
 
 .active-num3::after {
     content: counter(num3);
-  }
+}
 
-  @keyframes count2 {
+@keyframes count2 {
     from {
-      --num3: 0;
+        --num3: 0;
     }
-    to {
-      --num3: 426;
-    }
-  }
 
-  .contact-link{
+    to {
+        --num3: 426;
+    }
+}
+
+.contact-link {
     display: inline;
     padding-right: 10px;
     padding-left: 10px;
-  }
+}
 
-  .btn{
-    color:white;
+.btn {
+    color: white;
     border: 1px solid white;
-  }
-
-@media (max-width : 600px) {
-
-    .home-intro,
-    .about-intro {
-        text-align: center;
-    }
-
-    h1,
-    h2,
-    h3 {
-        font-size: 120%;
-    }
-
-    span {
-        font-size: 55%;
-    }
 }
 
 
@@ -383,5 +375,40 @@ a {
 
     h5 {
         text-align: center;
+    }
+}
+
+@media (max-width : 600px) {
+
+    .home-intro,
+    .about-intro {
+        text-align: center;
+    }
+
+    h1,
+    h2,
+    h3,
+    .heading {
+        font-size: 120%;
+    }
+
+    #type {
+        font-size: 100%;
+    }
+
+    span {
+        font-size: 55%;
+    }
+
+    .left-project, .right-project, .left, .right {
+        padding-right: 10px;
+        width: 100%;
+        float: left;
+    }
+    .left, .right{
+        padding: 10px;
+    }
+    .code-line{
+        font-size: 140%;
     }
 }
