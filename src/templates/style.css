@@ -5,7 +5,12 @@ body {
     background-color: rgb(24, 24, 24);
 }
 
-h2 {
+h1 {
+    font-size: 160%;
+}
+
+h2,
+h1 {
     font-weight: 850;
     background: -webkit-linear-gradient(right, #ff176c, #ff9e30);
     -webkit-background-clip: text;
@@ -197,15 +202,21 @@ a {
     color: #ff9e30;
 }
 
+a:hover {
+    text-decoration: none;
+    color: white;
+}
+
 .portfolio-numbers,
 .weather-numbers {
     font-size: 300%;
     font-weight: 800;
 }
 
-.code-line{
+.code-line {
     font-size: 200%;
 }
+
 @property --num {
     syntax: "<integer>";
     initial-value: 1392;
@@ -293,6 +304,22 @@ a {
     border: 1px solid white;
 }
 
+.about-btn {
+    background-image: linear-gradient(to right, #ff176c, #ff9e30);
+    border: 0px;
+}
+
+.button-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-btn:hover {
+    background-image: linear-gradient(to right, #ff9e30, #ff176c);
+    border: 0px;
+    font-size: 105%;
+}
 
 @media all and (min-width:960px) and (max-width: 1024px) {
 
@@ -400,15 +427,21 @@ a {
         font-size: 55%;
     }
 
-    .left-project, .right-project, .left, .right {
+    .left-project,
+    .right-project,
+    .left,
+    .right {
         padding-right: 10px;
         width: 100%;
         float: left;
     }
-    .left, .right{
+
+    .left,
+    .right {
         padding: 10px;
     }
-    .code-line{
+
+    .code-line {
         font-size: 140%;
     }
 }

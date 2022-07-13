@@ -16,6 +16,9 @@ app.use(express.urlencoded({extended:false}));
 app.get("/",(req,res)=>{
     res.render("index");
 });
+app.get("/certificate",(req,res)=>{
+    res.render("certificate");
+});
 
 app.post("/index",async(req,res)=>{
     try{
